@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .maindiv{
+            width: 50%;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        .box{
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="maindiv">
+      <div class="parentdiv">
+            <div class="box">1 chaild</div>
+            <div class="box">2 chaild</div>
+            <div class="box">3 chaild</div>
+            <div class="box">4chaild</div>
+            <div class="box">5 chaild</div>
+            <div class="box">6 chaild</div>
+            <div class="box">7 chaild</div>
+            <div class="box">8 chaild</div>
+            <div class="box">9 chaild</div>
+            <div class="box">10 chaild</div>
+            <div class="box">11 chaild</div>
+            <div class="box">12 chaild</div>
+            <div class="box">13 chaild</div>
+            <div class="box">14 chaild</div>
+            <div class="box">15 chaild</div>
+            <div class="box">16 chaild</div>
+            <div class="box">17 chaild</div>
+       </div>
+       <div class="button"><button onclick="tryIt()">click</button>
+      </div>
+    </div>
+
+    <script >
+        function tryIt(){
+        let element=document.getElementsByClassName("box");
+        console.log(element);
+        console.log(typeof(element));
+        for(let i=0;i<element.length;i++){
+            if(i%2!=0){
+                element[i].setAttribute('style','background-color: lime;color:white');
+            }
+        }
+        element[0].setAttribute('style','background-color:blue;color:white');
+        element[8].setAttribute('style','background-color:green;color:white');
+        element[16].setAttribute('style','background-color:palevioletred;color:white');
+    }
+    </script>
+</body>
+
+</html>
